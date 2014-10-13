@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  start_hour: 1
+  start_minute: 1
+  end_hour: 1
+  end_minute: 1
+  kind_of_ware: MyString
+  pick_direction: MyString
+  deliver_direction: MyString
+  pick_hour: 1
+  pick_minute: 1
+  deliver_hour: 1
+  pick_minute: 1
+  budget: 1
+  image: MyString
+
+two:
+  start_hour: 1
+  start_minute: 1
+  end_hour: 1
+  end_minute: 1
+  kind_of_ware: MyString
+  pick_direction: MyString
+  deliver_direction: MyString
+  pick_hour: 1
+  pick_minute: 1
+  deliver_hour: 1
+  pick_minute: 1
+  budget: 1
+  image: MyString

@@ -11,7 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141009163641) do
+ActiveRecord::Schema.define(version: 20141013213138) do
+
+  create_table "auctions", force: true do |t|
+    t.integer  "start_hour"
+    t.integer  "start_minute"
+    t.integer  "end_hour"
+    t.integer  "end_minute"
+    t.string   "kind_of_ware"
+    t.string   "pick_direction"
+    t.string   "deliver_direction"
+    t.integer  "pick_hour"
+    t.integer  "pick_minute"
+    t.integer  "deliver_hour"
+    t.integer  "budget"
+    t.string   "image"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "provider"
