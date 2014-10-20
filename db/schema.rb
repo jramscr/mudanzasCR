@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20141013213138) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "auctions", force: true do |t|
     t.integer  "start_hour"
     t.integer  "start_minute"
