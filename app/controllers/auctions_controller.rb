@@ -1,5 +1,6 @@
 class AuctionsController < ApplicationController
   def create_auction
-    @current_auction = nil
+    auction = Auction.new
+    auction.save!
   end
 end
