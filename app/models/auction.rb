@@ -1,4 +1,9 @@
 class Auction < ActiveRecord::Base
+
+  belongs_to :user
+
+  validates :user_uid, presence: true
+
   def create(startTime, endTime, typePackage, pickDirection, pickTime, deliverDirection, deliverTime, budget, image)
     @start_auction_time = startTime
     @end_auction_time = endTime
