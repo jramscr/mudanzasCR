@@ -1,6 +1,12 @@
 source 'https://rubygems.org'
 
+# Ruby version used on the project.
+ruby '1.9.3'
+# Gem for the emulation on the web with foreman. Belong to heroku proces.
 gem 'thin'
+# Gem for allow all the features in the platform of heroku.
+gem 'rails_12factor'
+# Gem for the login process with google.
 gem 'omniauth-google-oauth2','~> 0.2.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.6'
