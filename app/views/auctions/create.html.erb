@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html
+<head>
+  <meta charset="UTF-8">
+</head>
+<form action="make-auction-script" method="post">
+  <table>
+    <tr>
+      <td>Hora de Inicio:</td>
+      <td><input type="number" min="1" max="24" name="Start_Hour"></td>
+      <td><input type="number" min="1" max="59" name="Start_Minute"></td>
+    </tr>
+    <tr>
+      <td>Hora de Finalizar:</td>
+      <td><input type="number" min="1" max="24" name="End_Hour"></td>
+      <td><input type="number" min="1" max="59" name="End_Minute"></td>
+    </tr>
+    <tr>
+      <td>Tipo de Carga:</td>
+      <td>
+        <input type="radio" name="size-of-ware" value="Pequeño">Pequeño<br>
+        <input type="radio" name="size-of-ware" value="Mediano">Mediano<br>
+        <input type="radio" name="size-of-ware" value="Grande">Grande<br>
+      </td>
+    </tr>
+    <tr>
+      <td>Direccion: (Recoger aca)</td>
+      <td><input type="text" name="direction-to-pick"></td>
+    </tr>
+    <tr>
+      <td>Recoger el paquete a las:</td>
+      <td><input type="number" min="1" max="24" name="Hour-To-Pick"></td>
+      <td><input type="number" min="1" max="59" name="Minute-To-Pick"></td>
+    </tr>
+    <tr>
+      <td>Direccion: (Entregar aca)</td>
+      <td><input type="text" name="direction-to-deliver"></td>
+    </tr>
+    <tr>
+      <td>Entregar el paquete a las:</td>
+      <td><input type="number" min="1" max="24" name="Hour-To-Deliver"></td>
+      <td><input type="number" min="1" max="59" name="Minute-To-Deliver"></td>
+    </tr>
+    <tr>
+      <td>Presupuesto</td>
+      <td><input type="text" name="Budget"></td>
+    </tr>
+    <tr>
+      <td>Imagen de Carga:</td>
+      <td><input type="file" name="Image"></td>
+    </tr>
+    <tr>
+      <td><input type="submit" value="Crear Solicitud"></td>
+    </tr>
+  </table>
+</form>
+</html>

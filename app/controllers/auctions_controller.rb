@@ -1,6 +1,4 @@
 class AuctionsController < ApplicationController
-  def create_auction
-    auction = Auction.new
-    auction.save!
+  def create
   end
 end
