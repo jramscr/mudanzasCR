@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+# Gem for the forms.
+gem 'dynamic_form'
 # Ruby version used on the project.
 ruby '1.9.3'
 # Gem for the emulation on the web with foreman. Belong to heroku proces.

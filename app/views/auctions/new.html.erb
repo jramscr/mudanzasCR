@@ -6,7 +6,10 @@
   <%= csrf_meta_tags %>
   </head>
   <body>
-  <%=form_for(:auction) do |f| %>
+  <% form_for @auction  do |f| %>
+    <% @auction.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
     <p>
       <%= f.text_field :start_hour%><br>
       <%= f.text_field :start_minute%>

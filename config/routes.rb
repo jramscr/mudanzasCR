@@ -1,20 +1,73 @@
 Rails.application.routes.draw do
-  # setting routes with order ( controller/file_name ), using it for the specified.
-  get 'auctions/create'
-  get 'auctions/new'
-  get "auctions" => "auctions/create"
-  get 'home/show'
-  get 'sessions/create'
-  get 'sessions/destroy'
-  get 'user_profile/show'
+  # The priority is based upon order of creation: first created -> highest priority.
+  # See how all your routes lay out with "rake routes".
 
-  get 'auth/:provider/callback', to: 'sessions#create'
-  get 'auth/failure', to: redirect('/')
-  get 'signout', to: 'sessions#destroy', as: 'signout'
+  # You can have the root of your site routed with "root"
+  # root 'welcome#index'
 
-  resources :auctions , only: [:create, :new]
-  resource  :home, only: [:show]
-  resources :sessions, only: [:create, :destroy]
-  resources :user_profile , only: [:show]
-  root to: "home#show"
+  # Example of regular route:
+  #   get 'products/:id' => 'catalog#view'
+
+  # Example of named route that can be invoked with purchase_url(id: product.id)
+  #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
+
+  # Example resource route (maps HTTP verbs to controller actions automatically):
+  #   resources :products
+
+  # Example resource route with options:
+  #   resources :products do
+  #     member do
+  #       get 'short'
+  #       post 'toggle'
+  #     end
+  #
+  #     collection do
+  #       get 'sold'
+  #     end
+  #   end
+
+  # Example resource route with sub-resources:
+  #   resources :products do
+  #     resources :comments, :sales
+  #     resource :seller
+  #   end
+
+  # Example resource route with more complex sub-resources:
+  #   resources :products do
+  #     resources :comments
+  #     resources :sales do
+  #       get 'recent', on: :collection
+  #     end
+  #   end
+
+  # Example resource route with concerns:
+  #   concern :toggleable do
+  #     post 'toggle'
+  #   end
+  #   resources :posts, concerns: :toggleable
+  #   resources :photos, concerns: :toggleable
+
+  # Example resource route within a namespace:
+  #   namespace :admin do
+  #     # Directs /admin/products/* to Admin::ProductsController
+  #     # (app/controllers/admin/products_controller.rb)
+  #     resources :products
+  #   end
+
+  # Routes for the controllers.
+   get 'auctions/create'
+   get 'auctions/new'
+   get 'home/show'
+   get 'sessions/create'
+   get 'sessions/destroy'
+   get 'user_profile/show'
+   # Routes for the google oauth2.
+   get 'auth/:provider/callback', to: 'sessions#create'
+   get 'auth/failure', to: redirect('/')
+   get 'signout', to: 'sessions#destroy', as: 'signout'
+   resources :auctions , only: [:create, :new]
+   resource :home, only: [:show]
+   resources :sessions, only: [:create, :destroy]
+   resources :user_profile , only: [:show]
+   root to: "home#show"
 end
