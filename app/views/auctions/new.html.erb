@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <%= stylesheet_link_tag   "application", media: 'all' %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+  </head>
+  <body>
+  <%=form_for(:auction) do |f| %>
+    <p>
+      <%= f.text_field :start_hour%><br>
+      <%= f.text_field :start_minute%>
+    </p>
+    <p>
+      <%= f.text_field :end_hour%><br>
+      <%= f.text_field :end_minute%>
+    </p>
+    <p>
+      <%= f.text_field  :kind_of_ware%>
+    </p>
+    <p>
+      <%= f.text_field :pick_direction%><br>
+      <%= f.text_field :pick_hour%>
+      <%= f.text_field :pick_minute%>
+    </p>
+    <p>
+      <%= f.text_field :deliver_direction %><br>
+      <%= f.text_field :deliver_hour %>
+      <%= f.text_field :deliver_minute %>
+    </p>
+    <p>
+      <%= f.text_field :budget %>
+    </p>
+    <p>
+      <%= f.text_field :image %>
+    </p>
+    <p>
+      <%= f.submit "New request" %>
+    </p>
+  <% end %>
+  </body>
+</html>

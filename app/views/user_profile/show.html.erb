@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <script src="app/assets/javascripts/user_profile.js"></script>
   <meta charset="UTF-8">
 </head>
 <body>
@@ -8,15 +9,12 @@
     <center><p>Dale click al boton para solicitar convertirte en un transportista</p></center>
   </div>
   <center>
-  <form action="become-on-carrier" method="post">
-    <table>
-      <tr>
-        <td colspan="2" align="center">
-          <input type="submit" value="Convertirme en Transportista">
-        </td>
-      </tr>
-    </table>
-  </form>
+    <button onclick="requestForCarrier()">Convertirme en Transportista</button>
+  </center>
+  <center>
+    <form action="../auctions/new" method="get">
+      <button type="submit">Nueva Solicitud</button>
+    </form>
   </center>
   <footer>
     <p>Pernix Solutions - 2014</p>

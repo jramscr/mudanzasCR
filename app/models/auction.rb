@@ -1,18 +1,20 @@
-class Auction < ActiveRecord::Base
+class Auction
+  include ActiveModel::Validations
+  include ActiveModel::Conversion
+  extend ActiveModel::Naming
 
-  belongs_to :user
-
-  validates :user_uid, presence: true
-
-  def create(startTime, endTime, typePackage, pickDirection, pickTime, deliverDirection, deliverTime, budget, image)
-    @start_auction_time = startTime
-    @end_auction_time = endTime
-    @type_of_package = typePackage
-    @direction_to_pick = pickDirection
-    @pick_up_time = pickTime
-    @direction_to_deliver = deliverDirection
-    @deliver_time = deliverTime
-    @budget = budget
-    @image_file = image
+  def auction_params
+    params.require(:auction).permit(:start_hour, :start_minute, :end_hour, :end_minute, :kind_of_ware, :pick_direction,:pick_hour, :pick_minute, :deliver_direction, :deliver_hour, :deliver_minute, :budget, :image)
   end
+
+  def initialize(attributes = {})
+    attributes.each do |name, value|
+      send("#{name}=", value)
+    end
+  end
+
+  def persisted?
+    false
+  end
+
 end
