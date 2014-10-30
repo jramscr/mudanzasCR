@@ -24,16 +24,16 @@
 
 </head>
 <body>
-<form id="auction_form">
+<%= form_for :auction, url: auction_index_path  do |f|%>
   <div>
     <div>
       <div>
         <p>Hora de Inicio</p>
-        <%= tag("input", type: "integer") %>
+        <%= f.number_field :start_auction_at %><br>
       </div>
       <div>
         <p>Hora de Cierre</p>
-        <%= tag("input", type: "integer")%>
+        <%= f.number_field :end_auction_at%><br>
       </div>
     </div>
   </div>
@@ -43,16 +43,16 @@
       <div>
         <div>
           <p>Dia para recoger el paquete</p>
-          <%= tag("input", type: "text")%>
+          <%= f.text_field :day_to_pick%><br>
         </div>
         <div>
           <p>Hora para recoger el paquete</p>
-          <%= tag("input", type: "integer")%>
+          <%= f.number_field :hour_to_pick %><br>
         </div>
       </div>
       <div>
         <p>Direccion para recoger el paquete</p>
-        <%= tag("input", type: "text")%>
+        <%= f.text_field :direction_to_pick %><br>
       </div>
     </div>
   </div>
@@ -62,31 +62,31 @@
       <div>
         <div>
          <p>Dia de Entrega del paquete</p>
-         <%= tag("input", type: "text")%>
+         <%= f.text_field :day_to_deliver %><br>
         </div>
         <div>
          <p>Hora de Entrega del paquete</p>
-         <%= tag("input", type: "integer")%>
+         <%= f.number_field :hour_to_deliver %><br>
         </div>
        </div>
       <div>
         <p>Direccion de Entrega del paquete</p>
-        <%= tag("input", type: "text")%>
+        <%= f.text_field :direction_to_deliver%><br>
       </div>
      </div>
     </div>
   <div>
    <p>Presupuesto</p>
-   <%= tag("input", type: "integer")%>
+   <%= f.number_field :budget %><br>
   </div>
   <div>
    <p>Tipo de Paquete</p>
-   <%= tag("input", type: "text")%>
+   <%= f.text_field :kind_of_package %><br>
   </div>
   <div>
     <br>
-   <%= tag("input", type:"submit", value:"Enviar Solicitud") %>
+    <%= f.submit "Nueva Solicitud"%><br>
   </div>
-</form>
+<% end %>
 </body>
 </html>

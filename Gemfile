@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+# Gem for use the strong parameters is needed on rails 4. Put "ActiveModel::ForbiddenAttributesProtection" on every model you want to keep safe.
+#gem 'strong_parameters'
 # Gem for the forms.
 gem 'dynamic_form'
 # Ruby version used on the project.
