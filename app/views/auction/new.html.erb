@@ -7,46 +7,84 @@
       margin-right: auto;
       width: 70%;
 }
+.right {
+      float: right;
+      width: 300px;
+}
+.left {
+      float: left;
+      width: 300px;
+}
 </style>
+
+<center><h1>Crear una nueva solicitud de transporte</h1></center>
+<h3>Establezca las condiciones de la solicitud</h3>
+
 </head>
 <body>
-<h1>Create New Request for Transport</h1>
-
-<h2> Set the hour to start and finish the auction</h2><br>
-<form class = "center" id="auction_form">
-<div align="justify">
-  <p>Start Hour</p>
-  <%= tag("input", type: "integer") %>
-  <p>Finish Hour</p>
-  <%= tag("input", type: "integer")%>
-</div>
-<div>
-  <p>Day to pick the package</p>
-  <%= tag("input", type: "text")%>
-  <p>Hour to pick the package</p>
-  <%= tag("input", type: "integer")%>
-  <p>Direction to pick the package</p>
-  <%= tag("input", type: "text")%>
-</div>
-<div>
-  <p>Day to deliver the package</p>
-  <%= tag("input", type: "text")%>
-  <p>Hour to deliver the package</p>
-  <%= tag("input", type: "integer")%>
-  <p>Direction to deliver the package</p>
-  <%= tag("input", type: "text")%>
-</div>
-<div>
-  <p>Budget for request</p>
-  <%= tag("input", type: "integer")%>
-</div>
-<div>
-  <p>Day to pick the package</p>
-  <%= tag("input", type: "text")%>
-</div><br>
-<div>
-  <%= tag("input", type:"submit", value:"Send Request") %>
-</div>
+<form id="auction_form">
+  <div>
+    <div>
+      <div>
+        <p>Hora de Inicio</p>
+        <%= tag("input", type: "integer") %>
+      </div>
+      <div>
+        <p>Hora de Cierre</p>
+        <%= tag("input", type: "integer")%>
+      </div>
+    </div>
+  </div>
+  <div></div>
+  <div>
+    <div>
+      <div>
+        <div>
+          <p>Dia para recoger el paquete</p>
+          <%= tag("input", type: "text")%>
+        </div>
+        <div>
+          <p>Hora para recoger el paquete</p>
+          <%= tag("input", type: "integer")%>
+        </div>
+      </div>
+      <div>
+        <p>Direccion para recoger el paquete</p>
+        <%= tag("input", type: "text")%>
+      </div>
+    </div>
+  </div>
+  <div></div>
+  <div>
+    <div>
+      <div>
+        <div>
+         <p>Dia de Entrega del paquete</p>
+         <%= tag("input", type: "text")%>
+        </div>
+        <div>
+         <p>Hora de Entrega del paquete</p>
+         <%= tag("input", type: "integer")%>
+        </div>
+       </div>
+      <div>
+        <p>Direccion de Entrega del paquete</p>
+        <%= tag("input", type: "text")%>
+      </div>
+     </div>
+    </div>
+  <div>
+   <p>Presupuesto</p>
+   <%= tag("input", type: "integer")%>
+  </div>
+  <div>
+   <p>Tipo de Paquete</p>
+   <%= tag("input", type: "text")%>
+  </div>
+  <div>
+    <br>
+   <%= tag("input", type:"submit", value:"Enviar Solicitud") %>
+  </div>
 </form>
 </body>
 </html>

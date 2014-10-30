@@ -1,4 +1,4 @@
 function requestForCarrier()
 {
-  alert("Your request was sended! Thank you!");
+  alert("Su solicitud fue enviada y sera revisada! Gracias!");
 }
