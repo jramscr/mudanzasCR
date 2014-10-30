@@ -73,6 +73,7 @@ Rails.application.routes.draw do
    get 'auth/:provider/callback', to: 'sessions#create'
    get 'auth/failure', to: redirect('/')
    get 'signout', to: 'sessions#destroy', as: 'signout'
+   get 'profile', to: 'user_profile#show', as: 'profile'
    resource :home, only: [:show]
    resources :sessions, only: [:create, :destroy]
    resources :user_profile , only: [:show]

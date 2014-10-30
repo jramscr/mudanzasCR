@@ -8,6 +8,7 @@
       <% if current_user %>
         <small>Ingresado como <strong><%= current_user.name %></strong>!</small>
         <%= link_to "Salir", signout_path, id: "sign_out" %>
+        <%= button_to "Ver mi perfil", "/user_profile/show", id: "profile"%>
       <% else %>
         <%= button_to "Ingresar con Google", "/auth/google_oauth2", id: "sign_in" %>
       <% end %>

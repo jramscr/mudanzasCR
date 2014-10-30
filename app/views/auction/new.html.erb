@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <small>Ingresado como <strong><%= current_user.name %></strong>!</small>
+  <%= link_to "Salir", signout_path, id: "sign_out" %>
 <style>
 .center {
       margin-left: auto;
