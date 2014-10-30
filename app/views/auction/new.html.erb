@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.center {
+      margin-left: auto;
+      margin-right: auto;
+      width: 70%;
+}
+</style>
+</head>
+<body>
+<h1>Create New Request for Transport</h1>
+
+<h2> Set the hour to start and finish the auction</h2><br>
+<form class = "center" id="auction_form">
+<div align="justify">
+  <p>Start Hour</p>
+  <%= tag("input", type: "integer") %>
+  <p>Finish Hour</p>
+  <%= tag("input", type: "integer")%>
+</div>
+<div>
+  <p>Day to pick the package</p>
+  <%= tag("input", type: "text")%>
+  <p>Hour to pick the package</p>
+  <%= tag("input", type: "integer")%>
+  <p>Direction to pick the package</p>
+  <%= tag("input", type: "text")%>
+</div>
+<div>
+  <p>Day to deliver the package</p>
+  <%= tag("input", type: "text")%>
+  <p>Hour to deliver the package</p>
+  <%= tag("input", type: "integer")%>
+  <p>Direction to deliver the package</p>
+  <%= tag("input", type: "text")%>
+</div>
+<div>
+  <p>Budget for request</p>
+  <%= tag("input", type: "integer")%>
+</div>
+<div>
+  <p>Day to pick the package</p>
+  <%= tag("input", type: "text")%>
+</div><br>
+<div>
+  <%= tag("input", type:"submit", value:"Send Request") %>
+</div>
+</form>
+</body>
+</html>

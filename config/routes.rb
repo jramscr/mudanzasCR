@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+  get 'auction/new'
+
+  get 'auction/create'
+
+  get 'auction/read'
+
+  get 'auction/destroy'
+
+  get 'auction/update'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -55,8 +65,6 @@ Rails.application.routes.draw do
   #   end
 
   # Routes for the controllers.
-   get 'auctions/create'
-   get 'auctions/new'
    get 'home/show'
    get 'sessions/create'
    get 'sessions/destroy'
@@ -65,7 +73,6 @@ Rails.application.routes.draw do
    get 'auth/:provider/callback', to: 'sessions#create'
    get 'auth/failure', to: redirect('/')
    get 'signout', to: 'sessions#destroy', as: 'signout'
-   resources :auctions , only: [:create, :new]
    resource :home, only: [:show]
    resources :sessions, only: [:create, :destroy]
    resources :user_profile , only: [:show]

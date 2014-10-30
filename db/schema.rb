@@ -11,24 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141013213138) do
+ActiveRecord::Schema.define(version: 20141029235958) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "auctions", force: true do |t|
-    t.integer  "start_hour"
-    t.integer  "start_minute"
-    t.integer  "end_hour"
-    t.integer  "end_minute"
-    t.string   "kind_of_ware"
-    t.string   "pick_direction"
-    t.string   "deliver_direction"
-    t.integer  "pick_hour"
-    t.integer  "pick_minute"
-    t.integer  "deliver_hour"
+    t.integer  "start_auction_at"
+    t.integer  "end_auction_at"
+    t.string   "day_to_pick"
+    t.integer  "hour_to_pick"
+    t.string   "direction_to_pick"
+    t.string   "day_to_deliver"
+    t.integer  "hour_to_deliver"
+    t.string   "direction_to_deliver"
     t.integer  "budget"
-    t.string   "image"
+    t.string   "kind_of_package"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

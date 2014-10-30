@@ -1,31 +1,25 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  start_hour: 1
-  start_minute: 1
-  end_hour: 1
-  end_minute: 1
-  kind_of_ware: MyString
-  pick_direction: MyString
-  deliver_direction: MyString
-  pick_hour: 1
-  pick_minute: 1
-  deliver_hour: 1
-  pick_minute: 1
+  start_auction_at: 1
+  end_auction_at: 1
+  day_to_pick: MyString
+  hour_to_pick: 1
+  direction_to_pick: MyString
+  day_to_deliver: MyString
+  hour_to_deliver: 1
+  direction_to_deliver: MyString
   budget: 1
-  image: MyString
+  kind_of_package: MyString
 
 two:
-  start_hour: 1
-  start_minute: 1
-  end_hour: 1
-  end_minute: 1
-  kind_of_ware: MyString
-  pick_direction: MyString
-  deliver_direction: MyString
-  pick_hour: 1
-  pick_minute: 1
-  deliver_hour: 1
-  pick_minute: 1
+  start_auction_at: 1
+  end_auction_at: 1
+  day_to_pick: MyString
+  hour_to_pick: 1
+  direction_to_pick: MyString
+  day_to_deliver: MyString
+  hour_to_deliver: 1
+  direction_to_deliver: MyString
   budget: 1
-  image: MyString
+  kind_of_package: MyString
