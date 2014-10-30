@@ -1,5 +1,6 @@
 class AuctionController < ApplicationController
   def new
+    @auction = Auction.new
   end
 
   def create
@@ -7,8 +8,11 @@ class AuctionController < ApplicationController
     # render :text => params[:auction].inspect
     @auction = Auction.new(auction_params)
 
-    @auction.save
-    redirect_to @auction
+    if @auction.save
+        redirect_to user_profile_show_path
+    else
+      render "new"
+    end
   end
 
   def show

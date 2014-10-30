@@ -18,6 +18,36 @@
       <button type="submit">Nueva Solicitud de Transporte</button>
     </form>
   </center>
+  <center><p><strong>Lista de Solicitudes</strong></p></center>
+  <table>
+    <tr>
+       <th>Empieza</th>
+       <th>Termina</th>
+       <th>Dia de Salida</th>
+       <th>Hora de Salida</th>
+       <th>Direccion de Salida</th>
+       <th>Dia de Entrega</th>
+       <th>Hora de Entrega</th>
+       <th>Direccion de Entrega</th>
+       <th>Prupuesto Estipulado</th>
+       <th>Tipo de Carga</th>
+    </tr>
+
+    <% @auctions_list.each do |auction| %>
+      <tr>
+        <td><%= auction.start_auction_at %></td>
+        <td><%= auction.end_auction_at %></td>
+        <td><%= auction.day_to_pick %></td>
+        <td><%= auction.hour_to_pick %></td>
+        <td><%= auction.direction_to_pick %></td>
+        <td><%= auction.day_to_deliver %></td>
+        <td><%= auction.hour_to_deliver %></td>
+        <td><%= auction.direction_to_deliver %></td>
+        <td><%= auction.budget %></td>
+        <td><%= auction.kind_of_package %></td>
+      </tr>
+    <% end %>
+  </table>
   <footer>
     <p>Pernix Solutions - 2014</p>
   </footer>
