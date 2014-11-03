@@ -1,3 +1,29 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+$font-stack:    Helvetica, sans-serif;
+
+body{
+  padding: 20px 20px 20px 20px;
+  font: 100% $font-stack;
+  background-color: #3fb277;
+}
+#login-box{
+  padding-top: 48px;
+  padding-bottom: 48px;
+  padding-right: -50px;
+  padding-left: -50px;
+  background-color: #FF7643;
+  font-color: darkgreen;
+  align-content: center;
+}
+header{
+  height: 50px;
+  background: #F0F0F0;
+  border:1px solid #CCC;
+  width: 960px;
+  margin: 0px auto;
+}
+.login{
+}

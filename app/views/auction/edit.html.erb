@@ -16,11 +16,11 @@
     <div>
       <div>
         <p>Hora de Inicio</p>
-        <%= f.select :start_auction_at , options_for_select([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24])%><br>
+        <%= f.number_field :start_auction_at , :step => 1, :in => 1 ... 24%><br>
       </div>
       <div>
         <p>Hora de Cierre</p>
-        <%= f.select :end_auction_at , options_for_select([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24])%><br>
+        <%= f.number_field :end_auction_at , :step => 1, :in => 1 ... 24%><br>
       </div>
     </div>
   </div>
@@ -34,7 +34,7 @@
         </div>
         <div>
           <p>Hora para recoger el paquete</p>
-          <%= f.select :hour_to_pick , options_for_select([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24])%><br>
+          <%= f.number_field :hour_to_pick , :step => 1, :in => 1 ... 24%><br>
         </div>
       </div>
       <div>
@@ -53,7 +53,7 @@
         </div>
         <div>
          <p>Hora de Entrega del paquete</p>
-         <%= f.select :hour_to_deliver , options_for_select([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24])%><br>
+         <%= f.number_field :hour_to_deliver , :step => 1, :in => 1 ... 24%><br>
         </div>
        </div>
       <div>
