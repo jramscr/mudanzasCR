@@ -1,15 +1,26 @@
 <h1>Edita la solicitud de transporte</h1>
 
 <%= form_for :auction, url: auction_path(@auction), method: :patch  do |f|%>
-    <div>
+   <% if @auction.errors.any? %>
+    <div id="error_explanation">
+    <h2><%= pluralize(@auction.errors.count, "Falla") %>
+    impiden actualizar los datos:</h2>
+    <ul>
+    <% @auction.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+  <% end %>
+  <div>
     <div>
       <div>
         <p>Hora de Inicio</p>
-        <%= f.number_field :start_auction_at %><br>
+        <%= f.select :start_auction_at , options_for_select([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24])%><br>
       </div>
       <div>
         <p>Hora de Cierre</p>
-        <%= f.number_field :end_auction_at%><br>
+        <%= f.select :end_auction_at , options_for_select([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24])%><br>
       </div>
     </div>
   </div>
@@ -19,11 +30,11 @@
       <div>
         <div>
           <p>Dia para recoger el paquete</p>
-          <%= f.text_field :day_to_pick%><br>
+          <%= f.select :day_to_pick , options_for_select(["Domingo","Lunes","Martes","Miercoles","Jueves","Viernes","Sabado"])%><br>
         </div>
         <div>
           <p>Hora para recoger el paquete</p>
-          <%= f.number_field :hour_to_pick %><br>
+          <%= f.select :hour_to_pick , options_for_select([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24])%><br>
         </div>
       </div>
       <div>
@@ -38,11 +49,11 @@
       <div>
         <div>
          <p>Dia de Entrega del paquete</p>
-         <%= f.text_field :day_to_deliver %><br>
+         <%= f.select :day_to_deliver , options_for_select(["Domingo","Lunes","Martes","Miercoles","Jueves","Viernes","Sabado"])%><br>
         </div>
         <div>
          <p>Hora de Entrega del paquete</p>
-         <%= f.number_field :hour_to_deliver %><br>
+         <%= f.select :hour_to_deliver , options_for_select([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24])%><br>
         </div>
        </div>
       <div>
@@ -53,15 +64,15 @@
     </div>
   <div>
    <p>Presupuesto</p>
-   <%= f.number_field :budget %><br>
+   <%= f.number_field :budget, :step => 1000, :in => 1000 ... 1000000 %><br>
   </div>
   <div>
    <p>Tipo de Paquete</p>
-   <%= f.text_field :kind_of_package %><br>
+   <%= f.select :kind_of_package , options_for_select(["Pequeno Encajable","Pequeno Irregular", "Mediano Encajable","Mediano Irregular","Grande Encajable","Grande Irregular", "Otros"])%><br>
   </div>
   <div>
     <br>
-    <%= f.submit "Nueva Solicitud"%><br>
+    <%= f.submit "Actualizar Solicitud"%><br>
   </div>
 <% end %>
 <%= link_to 'Regresar al perfil', user_profile_show_path %>
