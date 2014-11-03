@@ -1,0 +1,67 @@
+<h1>Edita la solicitud de transporte</h1>
+
+<%= form_for :auction, url: auction_path(@auction), method: :patch  do |f|%>
+    <div>
+    <div>
+      <div>
+        <p>Hora de Inicio</p>
+        <%= f.number_field :start_auction_at %><br>
+      </div>
+      <div>
+        <p>Hora de Cierre</p>
+        <%= f.number_field :end_auction_at%><br>
+      </div>
+    </div>
+  </div>
+  <div></div>
+  <div>
+    <div>
+      <div>
+        <div>
+          <p>Dia para recoger el paquete</p>
+          <%= f.text_field :day_to_pick%><br>
+        </div>
+        <div>
+          <p>Hora para recoger el paquete</p>
+          <%= f.number_field :hour_to_pick %><br>
+        </div>
+      </div>
+      <div>
+        <p>Direccion para recoger el paquete</p>
+        <%= f.text_field :direction_to_pick %><br>
+      </div>
+    </div>
+  </div>
+  <div></div>
+  <div>
+    <div>
+      <div>
+        <div>
+         <p>Dia de Entrega del paquete</p>
+         <%= f.text_field :day_to_deliver %><br>
+        </div>
+        <div>
+         <p>Hora de Entrega del paquete</p>
+         <%= f.number_field :hour_to_deliver %><br>
+        </div>
+       </div>
+      <div>
+        <p>Direccion de Entrega del paquete</p>
+        <%= f.text_field :direction_to_deliver%><br>
+      </div>
+     </div>
+    </div>
+  <div>
+   <p>Presupuesto</p>
+   <%= f.number_field :budget %><br>
+  </div>
+  <div>
+   <p>Tipo de Paquete</p>
+   <%= f.text_field :kind_of_package %><br>
+  </div>
+  <div>
+    <br>
+    <%= f.submit "Nueva Solicitud"%><br>
+  </div>
+<% end %>
+<%= link_to 'Regresar al perfil', user_profile_show_path %>
