@@ -9,7 +9,7 @@
         <%= link_to "Salir", signout_path, id: "sign_out" %>
         <%= button_to "Ver Perfil", profile_path, id: "profile" %>
       <% else %>
-        <%= button_to "Ingresar con Google", "/auth/google_oauth2", id: "sign_in" %>
+        <center><%= button_to "Ingresar con Google", "/auth/google_oauth2", id: "sign_in" %></center>
       <% end %>
     </div>
   </div>

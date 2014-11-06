@@ -14,8 +14,8 @@ html, body {
 
 body {
   padding: 5em 1em;
-  background-image: url(app/assets/images/background.jpg);
-  background-repeat: no-repeat;
+  background-image: url(background.jpg);
+  background-repeat: repeat;
   background-size: cover;
   background-position: center;
   }
@@ -28,9 +28,12 @@ h1 {
   font-family: 'Covered By Your Grace', cursive;
   font-weight: 300;
   margin-top: -1em;
-  text-shadow: 0 2px 1px white;
+  text-shadow: 0 2px 1px red;
+  color: white;
   }
-
+h4 {
+  color: lightgreen;
+}
 #box {
   margin: auto;
   width: 50em;
