@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 20141029235958) do
   enable_extension "plpgsql"
 
   create_table "auctions", force: true do |t|
+    t.integer  "master_key"
     t.integer  "start_auction_at"
     t.integer  "end_auction_at"
     t.string   "day_to_pick"

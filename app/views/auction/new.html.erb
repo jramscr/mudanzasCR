@@ -38,6 +38,7 @@
   <% end %>
   <div>
     <div>
+      <div><%= f.hidden_field :master_key%></div>
       <div>
         <p>Hora de Inicio</p>
         <%= f.number_field :start_auction_at, :step => 1, :in => 1 ... 24%><br>

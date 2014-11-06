@@ -1,6 +1,7 @@
 class CreateAuctions < ActiveRecord::Migration
   def change
     create_table :auctions do |t|
+      t.integer :master_key
       t.integer :start_auction_at
       t.integer :end_auction_at
       t.string :day_to_pick
