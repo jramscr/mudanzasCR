@@ -1,0 +1,116 @@
+@import url(http://fonts.googleapis.com/css?family=Covered+By+Your+Grace);
+/* line 4, /home/jesus/Desktop/MudanzasDeCostaRica/app/assets/stylesheets/user_profile.css.scss */
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 8, /home/jesus/Desktop/MudanzasDeCostaRica/app/assets/stylesheets/user_profile.css.scss */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 15, /home/jesus/Desktop/MudanzasDeCostaRica/app/assets/stylesheets/user_profile.css.scss */
+body {
+  padding: 5em 1em;
+  background-color: azure;
+  background-repeat: repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/* line 25, /home/jesus/Desktop/MudanzasDeCostaRica/app/assets/stylesheets/user_profile.css.scss */
+h1 {
+  text-align: center;
+  font-size: 275%;
+  font-family: 'Covered By Your Grace', cursive;
+  font-weight: 300;
+  margin-top: -1em;
+  text-shadow: 0 2px 1px red;
+  color: white;
+}
+
+/* line 34, /home/jesus/Desktop/MudanzasDeCostaRica/app/assets/stylesheets/user_profile.css.scss */
+h4 {
+  color: lightgreen;
+}
+
+/* line 37, /home/jesus/Desktop/MudanzasDeCostaRica/app/assets/stylesheets/user_profile.css.scss */
+#box {
+  margin: auto;
+  width: 50em;
+  height: 100%;
+  white-space: nowrap;
+}
+@media all and (max-width: 52em) {
+  /* line 37, /home/jesus/Desktop/MudanzasDeCostaRica/app/assets/stylesheets/user_profile.css.scss */
+  #box {
+    width: 100%;
+  }
+}
+
+/* line 46, /home/jesus/Desktop/MudanzasDeCostaRica/app/assets/stylesheets/user_profile.css.scss */
+#center {
+  vertical-align: middle;
+  display: inline-block;
+  white-space: normal;
+}
+
+/* line 51, /home/jesus/Desktop/MudanzasDeCostaRica/app/assets/stylesheets/user_profile.css.scss */
+#box:after {
+  content: "";
+  width: 1px;
+  height: 100%;
+  vertical-align: middle;
+  display: inline-block;
+  margin-right: -10px;
+}
+
+/* line 60, /home/jesus/Desktop/MudanzasDeCostaRica/app/assets/stylesheets/user_profile.css.scss */
+table {
+  background-color: white;
+  padding: 1em;
+}
+/* line 63, /home/jesus/Desktop/MudanzasDeCostaRica/app/assets/stylesheets/user_profile.css.scss */
+table, table * {
+  border-color: #27ae60 !important;
+}
+/* line 66, /home/jesus/Desktop/MudanzasDeCostaRica/app/assets/stylesheets/user_profile.css.scss */
+table th {
+  font-weight: 300;
+  text-align: center;
+  color: white;
+  background-color: #27ae60;
+  position: relative;
+}
+/* line 72, /home/jesus/Desktop/MudanzasDeCostaRica/app/assets/stylesheets/user_profile.css.scss */
+table th:after {
+  content: "";
+  display: block;
+  height: 5px;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #16a085;
+  position: absolute;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+
