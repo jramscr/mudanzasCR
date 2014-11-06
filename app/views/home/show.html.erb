@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <div>
-	<img src="http://us.123rf.com/400wm/400/400/iserg/iserg1009/iserg100900008/7702779-la-mano-de-camion-con-caja-sobre-fondo-blanco-imagen-aislados-3d.jpg" style="width:5%;height:5%">
 	<h1>Mudanzas de Costa Rica</h1>
     <div class="login" id="login-box">
       <% if current_user %>
@@ -9,7 +8,7 @@
         <%= link_to "Salir", signout_path, id: "sign_out" %>
         <%= button_to "Ver Perfil", profile_path, id: "profile" %>
       <% else %>
-        <%= button_to "Ingresar con Google", "/auth/google_oauth2", id: "sign_in" %>
+        <center><%= button_to "Ingresar con Google", "/auth/google_oauth2", id: "sign_in" %></center>
       <% end %>
     </div>
 </div>
