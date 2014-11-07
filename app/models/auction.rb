@@ -1,7 +1,7 @@
 class Auction < ActiveRecord::Base
     include ActiveModel::ForbiddenAttributesProtection
 
-    validates :master_key, numericality: {only_integer: true}
+    validates :user_id, numericality: {only_integer: true}
     validates :start_auction_at,:end_auction_at, :hour_to_pick, :direction_to_pick, :hour_to_deliver, :direction_to_deliver, :budget , presence: true
     validates :budget , numericality: {only_integer: true}
     validates :start_auction_at, numericality: {greater_than_or_equal_to: 1, less_than: 24}

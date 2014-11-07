@@ -41,6 +41,6 @@ class AuctionController < ApplicationController
 
 private
   def auction_params
-    params.require(:auction).permit(:start_auction_at, :end_auction_at, :day_to_pick, :hour_to_pick, :direction_to_pick, :day_to_deliver, :hour_to_deliver, :direction_to_deliver, :budget, :kind_of_package)
+    params.require(:auction).permit(:user_id, :start_auction_at, :end_auction_at, :day_to_pick, :hour_to_pick, :direction_to_pick, :day_to_deliver, :hour_to_deliver, :direction_to_deliver, :budget, :kind_of_package)
   end
 end
