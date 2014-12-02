@@ -13,4 +13,41 @@
  *= require_tree .
  *= require_self
  */
+#header-h1{
+  padding-left: 50px;
+  font-stretch: semi-expanded;
+  color: #006A6A;
+}
 
+#header-h4{
+  color:#33AFAF;
+  size: 25px;
+}
+
+th {
+  color:#6EA500;
+}
+
+th:hover{
+  background:none;
+}
+
+#tabla-solicitudes {
+  margin-top: 30px;
+}
+
+.table-responsive {
+  width: 80%;
+  top: 20%;
+  left: 50%;
+  position: absolute;
+  margin-left: -40%;
+}
+
+#nueva-solicitud {
+  float: left;
+}
+
+#tabla-de-solicitudes {
+  padding-top:100px;
+}
