@@ -1,14 +1,31 @@
 <!DOCTYPE html>
 <html>
+<head>
+<!--Bootstrap Elements -->
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+<!--End of Bootsrap -->
+
+<link href="http://fonts.googleapis.com/css?family=Nixie+One" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Ledger" rel="stylesheet" type="text/css">
+</head>
 <body>
-	<h1>Mudanzas de Costa Rica</h1>
-    <div class="login" id="login-box">
+	<h1 id="titulo-pagina">Mudanzas de Costa Rica</h1>
+    <div>
       <% if current_user %>
         <small>Ingresado como <strong><%= current_user.name %></strong>!</small>
         <%= link_to "Salir", signout_path, id: "sign_out" %>
         <%= button_to "Ver Perfil", profile_path, id: "profile" %>
       <% else %>
-        <center><%= button_to "Ingresar con Google", "/auth/google_oauth2", id: "sign_in" %></center>
+        <div id="login-buttons" class="btn-group btn-group" role="group">
+          <a id="google_button" type="button" class="btn"><%= button_to "Google", "/auth/google_oauth2", id: "sign_in" %></a>
+          <a id="facebook_button" type="button" class="btn"><%= button_to "Facebook", "/auth/google_oauth2", id: "sign_in" %></a>
+          <a id="twitter_button" type="button" class="btn"><%= button_to "Twitter", "/auth/google_oauth2", id: "sign_in" %></a>
+        </div>
       <% end %>
     </div>
   </div>
